@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NotchExperiment.Views"
+    FlyoutBehavior="Disabled"
+    Title="NotchExperiment"
+    xmlns:notch="clr-namespace:NotchExperiment"
+    x:Class="NotchExperiment.AppShell">
+
+    <Shell.Effects>
+        <notch:NotchEffect
+            Model="P30"
+            
+            >
+            <notch:NotchEffect.CustomDevice>
+                <notch:Device
+                    NotchX="370"
+                    NotchY="0"
+                    StatusBarHeight="0"
+                    NotchWidth="80"
+                    NotchHeight="80"
+                    NotchTopRadius="18"
+                    CornerRadius="100"
+                    ScreenWidth="800"
+                    ScreenHeight="800"
+                    NotchBottomRadius="40"
+                    >
+                </notch:Device>
+            </notch:NotchEffect.CustomDevice>
+        </notch:NotchEffect>
+    </Shell.Effects>
+    <!-- Your Pages -->
+    <ShellItem>
+         <ShellSection
+            Title="Notch"
+            Icon="tab_about.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:ExampleNotchedPage}" />
+        </ShellSection>
+        <ShellSection
+            Title="Effect"
+            Icon="tab_about.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:AffectedPage}" />
+        </ShellSection>
+        <ShellSection
+            Title="Browse"
+            Icon="tab_feed.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:ItemsPage}" />
+        </ShellSection>
+        <ShellSection
+            Title="About"
+            Icon="tab_about.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:ExampleNotchedPage}" />
+        </ShellSection>
+        
+    </ShellItem>
+    <!-- Optional Templates 
+    // These may be provided inline as below or as separate classes.
+
+    // This header appears at the top of the Flyout.
+    <Shell.FlyoutHeaderTemplate>
+	<DataTemplate>
+            <Grid>ContentHere</Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    // ItemTemplate is for ShellItems as displayed in a Flyout
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <ContentView>
+                Bindable Properties: Title, Icon
+            </ContentView>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    // MenuItemTemplate is for MenuItems as displayed in a Flyout
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <ContentView>
+                Bindable Properties: Text, Icon
+            </ContentView>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    -->
+</Shell>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NotchExperiment"
+    x:Class="NotchExperiment.Views.AffectedPage">
+    <ContentPage.Effects>
+        <local:NotchEffect
+            Model="iPhoneXSMax">
+            <local:NotchEffect.CustomDevice>
+                <local:Device
+                    NotchX="370"
+                    NotchY="0"
+                    StatusBarHeight="0"
+                    NotchWidth="80"
+                    NotchHeight="58"
+                    NotchTopRadius="18"
+                    CornerRadius="45"
+                    NotchBottomRadius="40"
+                    >
+                </local:Device>
+            </local:NotchEffect.CustomDevice>
+        </local:NotchEffect>
+    </ContentPage.Effects>
+    <ContentPage.Content>
+        <Grid
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <BoxView BackgroundColor="Green"
+                     CornerRadius="100"
+                     Grid.Column="1" >
+                
+            </BoxView>
+            <BoxView Color="Green"
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     WidthRequest="20"
+                     HorizontalOptions="Center"
+                     />
+            <BoxView Color="Green"
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     Rotation="30"
+                     TranslationY="-25"
+                     TranslationX="-88"
+                     WidthRequest="20"
+                     HorizontalOptions="Center"
+                     />
+            <BoxView Color="Green"
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     Rotation="-30"
+                     TranslationY="-25"
+                     TranslationX="88"
+                     WidthRequest="20"
+                     HorizontalOptions="Center"
+                     />
+
+            <BoxView Color="Green"
+                     Grid.Column="1"
+                     Grid.Row="2"
+                     Rotation="30"
+                     TranslationY="-25"
+                     TranslationX="-88"
+                     WidthRequest="20"
+                     HorizontalOptions="Center"
+                     />
+            <BoxView Color="Green"
+                     Grid.Column="1"
+                     Grid.Row="2"
+                     Rotation="-30"
+                     TranslationY="-25"
+                     TranslationX="88"
+                     WidthRequest="20"
+                     HorizontalOptions="Center"
+                     />
+
+           <Image
+               Grid.Row="0"
+               Grid.ColumnSpan="4"
+               Margin="140,20,0,0"
+               Grid.Column="1"
+               Source="bubble2.png"
+               />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

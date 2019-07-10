@@ -1,0 +1,8 @@
+<linker>
+  <assembly fullname="NotchExperiment">
+    <type fullname="NotchExperiment.NotchedPage"/>
+  </assembly>
+  <assembly fullname="Xamarin.Forms.Core">
+    <type fullname="Xamarin.Forms.ContentPage"/>
+  </assembly>
+</linker>

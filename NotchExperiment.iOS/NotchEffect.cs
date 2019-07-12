@@ -19,7 +19,6 @@ namespace NotchExperiment.iOS
             var notchInfo = Element.Effects.FirstOrDefault(x => x is NotchExperiment.NotchEffect) as NotchExperiment.NotchEffect;
             if (notchInfo != null)
             {
-                (Element as VisualElement).BackgroundColor = Color.Green;
                 Device device;
                 if (notchInfo.Model == PhoneModels.Custom)
                 {
